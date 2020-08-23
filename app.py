@@ -35,6 +35,10 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Br(),
             html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             ], className="seven columns", ),
           html.Div([
