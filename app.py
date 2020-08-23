@@ -289,6 +289,9 @@ dcc.Tab(label='Research', children=[
         ], className="ten columns", style=dict(textAlign='Left')),
          html.Div([
             html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
             html.Label("This website is optimized for PC."),
             html.Br(),
         ], className="eleven columns", style=dict(textAlign='Right')),##style sets the alignment of text
