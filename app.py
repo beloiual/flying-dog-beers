@@ -30,6 +30,9 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.H5('The website you are on right now was programmed completely by me using the Jupyter Dash library in Python.'), 
             html.Br(),
             html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             ], className="seven columns", style=dict(textAlign='center')),
           html.Div([
