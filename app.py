@@ -38,8 +38,8 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             
             html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'50%'}), ##personal photo and social
             html.Label("Email: beloiual@umich.edu"),
-            html.Label("LinkedIn: Alexandru Beloiu"),
-            html.Label("Instagram: alex.beloiu"),
+            html.Label("LinkedIn: alexandru-beloiu-4ab46b1b5"),
+            html.Label("Instagram: @alex.beloiu"),
             html.Br(),
 
         ], className="four columns", style=dict(textAlign='center')),
