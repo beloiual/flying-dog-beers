@@ -27,13 +27,12 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         html.Div([
             html.H2('About Me'), ## about me sextion
             html.Img(src='https://cdn.discordapp.com/attachments/695721840324247562/746980932598104125/unknown.png', style={'width':'100%'}), ##adds a photo of the terminal
+            html.Br(),
             html.H5('The website you are on right now was programmed completely by me using the Jupyter Dash library in Python.'), 
             html.Br(),
             html.Br(),
             html.Br(),
             html.Br(),
-            html.Br(),
-            html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             ], className="seven columns", style=dict(textAlign='center')),
           html.Div([
             
@@ -46,6 +45,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         ], className="four columns", style=dict(textAlign='center')),
 
         html.Div([ ##education section
+            html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.H2('My Education'),
             html.H4('University of Michigan, Ann Arbor: Computer Engineering (2020-Present)'),
             html.H4('Current Course Schedule (Fall 2020)'),
