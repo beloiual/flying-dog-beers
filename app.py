@@ -1,16 +1,14 @@
-from jupyter_dash import JupyterDash
-
 from dash import Dash
 import dash_core_components as dcc
 import dash_html_components as html
 
 from dash.dependencies import Input, Output, State
 from dash_table import DataTable
-import plotly.graph_objs as go
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 app=JupyterDash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 colors = {
     'background': '#fbf9c7',
     'text': '#e5e9f0'
