@@ -65,6 +65,24 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
 
         ], className="four columns", style=dict(textAlign='center')),##style sets the alignment of text
+         html.Div([
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.H5("This website is optimized for PC"),
+            html.Br(),
+        ], className="four columns", style=dict(textAlign='Right')),##style sets the alignment of text
   ],style=tab_style, selected_style=tab_selected_style),
     dcc.Tab(label='Education', children=[
         html.Div([ ##white space section
