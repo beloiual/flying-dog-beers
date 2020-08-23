@@ -6,31 +6,31 @@ import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
 from dash_table import DataTable
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css'] ##chooses a style
 
-app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets) ##initializes the app
 server = app.server
 colors = {
-    'background': '#fbf9c7',
+    'background': '#fbf9c7', ##sets the background color
     'text': '#e5e9f0'
 }
 
 
-app.layout = html.Div(style={'backgroundColor': colors['background']}, children=[
+app.layout = html.Div(style={'backgroundColor': colors['background']}, children=[ ##sets the layout with a change in background color
     html.Div([
-        html.H1('Alexandru D. Beloiu - My Portfolio'),
+        html.H1('Alexandru D. Beloiu - My Portfolio'), #header (title_)
     ], style=dict(textAlign='center')),
 
    
     html.Div([
 
-        html.Div([
-            html.H2('About Me'),
-            html.Label('I am currently an undergraduate studying Computer Engineering at the University of Michigan Ann Arbor, set to graduate in 2024.'),
+        html.Div([ ##The 'About Me' section
+            html.H2('About Me'), 
+            html.Label('I am currently an undergraduate studying Computer Engineering at the University of Michigan Ann Arbor, set to graduate in 2024.'), ##writes a line of text
             html.Label('Over this past summer, I have been developing skills in creating BlockChain smart contracts using the Solidity programming language and deploying them to testnets. Along with increasing my grasp on the vast applications of Blockchain development, I have also been developing my skills in web development.'),
             html.Br(),
             html.Br(),
-            html.Br(),
+            html.Br(),##adds a space in between a line
             html.Br(),
             html.Br(),
             html.H5('The website you are on right now was programmed completely by me using the Juypter Dash library in Python.'),
@@ -39,17 +39,17 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             ], className="seven columns", ),
-          html.Div([
+          html.Div([ ##adds the photo and the social media
             
             html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'33%'}),
             html.Label("Email: beloiual@umich.edu"),
-            html.Label("LinkedIn: Alexandru Beloiu"),
-            html.Label("Instagram: alex.beloiu"),
+            html.Label("LinkedIn: alexandru-beloiu-4ab46b1b5"),
+            html.Label("Instagram: @alex.beloiu"),
             html.Br(),
 
-        ], className="four columns"),
+        ], className="four columns"),##sets how much space is taken up by this section
 
-        html.Div([
+        html.Div([ ##education section
             html.H2('My Education'),
             html.H4('University of Michigan, Ann Arbor: Computer Engineering (2020-Present)'),
             html.H4('Current Course Schedule (Fall 2020)'),
@@ -68,12 +68,12 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             ], className="seven columns"),  
-            html.Div([
+            html.Div([ ##UofM photo
               html.Br(),
               html.Br(),
               html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746884075289051246/U-M-logo-preview.png', style={'width':'75%'}),        
               ], className="four columns"),
-        html.Div([
+        html.Div([ ##experience section
             html.Br(),
             html.H2('My Relavent Experience'),
             html.H4('Blockchain at the University of Michigan (7/2020 - Present)'),
@@ -94,16 +94,14 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.Br(),
-        ], className="ten columns", style=dict(textAlign='left')),
+        ], className="ten columns", style=dict(textAlign='left')), ##style sets the alignment of text
      
         html.Div([
-            html.H1('My Projects'),
+            html.H1('My Projects'), ##project section
             html.Label('Over the past year, I have worked on a few distinct projects in multiple languages, including Python, Solidity and MATLAB.'),
-
-
         ], className="Ten columns"),
       
-        html.Div([
+        html.Div([ ##cryptocharity scection
             html.H3('CryptoCharity'),
             html.Img(src='https://cdn.discordapp.com/attachments/738150178153955339/739574691949314159/Crypto-2.png', style={'width':'33%'}),
             html.Br(),
@@ -117,10 +115,10 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.H5('Currently preparing to deploy a polished version of this project to Coinbase so real Ether can be transacted'),
             html.Br(),
             html.Br(),
-            html.A(html.Button('Github Repository (Smart Contract)', className='thirteen columns', style=dict(textAlign='center')),
-            href='https://github.com/GeorgeFane/metacoin-box'),
+            html.A(html.Button('Github Repository (Smart Contract)', className='thirteen columns', style=dict(textAlign='center')), ##creates a button of a size "13"
+            href='https://github.com/GeorgeFane/metacoin-box'), ##link with the code
             html.Br(),
-            html.A(html.Button('Github Repository (Web App)', className='thirteen columns', style=dict(textAlign='center')),
+            html.A(html.Button('Github Repository (Web App)', className='thirteen columns', style=dict(textAlign='center')), ##creates a button of a size "13"
             href='https://github.com/GeorgeFane/metacoin-box'),
             html.Br(),
             html.Br(),
@@ -128,7 +126,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
         ], className="three columns", style=dict(textAlign='center')),
 
-        html.Div([
+        html.Div([ ##initializes the Vibration of a Bridge section
             html.H3('Modeling and Analysis of the Vibration of a Bridge'),
             html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746906202755301456/unknown.png', style={'width':'33%'}),
             html.Br(),
@@ -143,7 +141,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Br(),
         ], className="four columns", style=dict(textAlign='center')),
-        html.Div([
+        html.Div([ ##initializes the section about this website
             html.H3('This Website'),
             html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746805658183270522/3wgIDj3j.png', style={'width':'33%'}),
                    
@@ -161,12 +159,12 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         ], className="four columns", style=dict(textAlign='center')),
 
 
-        html.Div([
+        html.Div([ ##research section
            
             html.Br(),
             html.Br(),
 
-            html.Br(),
+            html.Br(), ##below acts as a styling for the website
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.Br(), 
             html.H1('Summer Research'),
@@ -182,22 +180,22 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Br(),
             html.A(html.Button('Presentation of Research', className='thirteen columns'),
-            href='https://docs.google.com/presentation/d/1Q-Y89N856EosrPXJvpV2HqX1c5y88jDctkOtvcjmvN0/edit?usp=sharing'),
+            href='https://docs.google.com/presentation/d/1Q-Y89N856EosrPXJvpV2HqX1c5y88jDctkOtvcjmvN0/edit?usp=sharing'), ##links to the research
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.Br(),
 
         ], className="ten columns", style=dict(textAlign='left')),
 
-       html.Div([
+       html.Div([ ##leadership header
                  html.H2('My Leadership Experience'),
        ], className="ten columns"),
-       html.Div([
+       html.Div([ ##leadership section 1
                  html.H4('Northville High School Track and Field Team Captain (11th-12th)'),
                  html.Label('• Responsible for leading practice, organizing team-building events, ensuring athletes participation, and helping new runners improve technique'),
                  html.Label('• Organized winter track conditioning throughout the off-season '),
                  html.Label('• Organized and participated in community service events by cooking and packaging Thanksgiving meals and purchasing, wrapping and distributing Christmas gifts to families in need'),
        ], className="five columns"),
-       html.Div([
+       html.Div([ ##leadership section 2
                  html.H4('Northville High School Cross Country Team Captain (12th)'),
                  html.Label('• Responsible for leading practice, assisting coaches, motivating the team, and mentoring younger members'),
                  html.Label('• Led and planned runs for summer conditioning '),
@@ -207,7 +205,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
        ], className="five columns"),
 
 
-       html.Div([
+       html.Div([ ##skills
             html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.H2('My Skills'),
@@ -225,4 +223,4 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 ])
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run_server() #runs the app
