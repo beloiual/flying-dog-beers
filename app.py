@@ -202,12 +202,14 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
 
        html.Div([ ##skills
-            html.Br(),
+           html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.H2('My Skills'),
-            html.Label('Technical Programming Skills: Proficient in Solidity, Truffle, Python, JAVA, C++, and MATLAB'),
+            html.Label('Technical Programming Skills: Proficient in Solidity, Truffle Framework, Python, JAVA, C++, and MATLAB'),
             html.Br(),
             html.Label('Technical 3D Modeling Skills: Proficient in Autodesk Inventor and Google Sketch-Up'),
+            html.Br(),
+            html.Br(),
 
 
         ], className="ten columns"),
