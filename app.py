@@ -39,7 +39,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'50%'}), ##personal photo and social
             html.Label("Email: beloiual@umich.edu"),
             html.Label("LinkedIn: alexandru-beloiu-4ab46b1b5"),
-            html.Label("Instagram: @alex.beloiu"),
+            html.Label("Instagram: @alex_beloiu"),
             html.Br(),
 
         ], className="four columns", style=dict(textAlign='center')),
@@ -48,14 +48,14 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.H2('My Education'),
             html.H4('University of Michigan, Ann Arbor: Computer Engineering (2020-Present)'),
-            html.H4('Current Course Schedule (Fall 2020)'),
+            html.H3('Current Course Schedule (Fall 2020)'),
             html.Label('• EECS 203: Discrete Math'),
             html.Br(),
             html.Label('• Engr 151: Accelerated Introduction into Computers and Programming (C++)'),
             html.Br(),
             html.Label('• Engr 100: Gaming for the Greater Good'),
             html.Br(),
-            html.H4('My Previous Education (Northville High School)'),
+            html.H4('Northville High School (2016-2020'),
             html.Label('• GPA: 3.96'),
             html.Br(),
             html.Label('• Awards: National Merit Commended, Academic Excellence Award Recipient, National AP Scholar, Presidential Award, Summa Cum Laude, University of Michigan Regents Scholarship'),
@@ -202,7 +202,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
 
        html.Div([ ##skills
-           html.Br(),
+            html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.H2('My Skills'),
             html.Label('Technical Programming Skills: Proficient in Solidity, Truffle Framework, Python, JAVA, C++, and MATLAB'),
