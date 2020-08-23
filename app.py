@@ -12,20 +12,42 @@ app = dash.Dash(__name__, external_stylesheets=external_stylesheets) ##initializ
 server = app.server
 colors = {
     'background': '#fbf9c7', ##sets the background color
-    'text': '#e5e9f0'
+    'text': '#e5e9f0',
+    'background2': '#71523a',
+}
+
+tabs_styles = {
+    'height': '44px'
+}
+tab_style = {
+    'borderBottom': '1px solid #d6d6d6',
+    'padding': '6px',
+    'fontWeight': '',
+    'color': 'white',
+    'backgroundColor': '#71523a',
+}
+
+tab_selected_style = {
+    'borderTop': '1px solid #d6d6d6',
+    'borderBottom': '1px solid #d6d6d6',
+    'backgroundColor': '#9c7250',
+    'color': 'white',
+    'padding': '6px'
 }
 
 
 app.layout = html.Div(style={'backgroundColor': colors['background']}, children=[ ##sets the layout with a change in background color
     html.Div([
-        html.H1('Alexandru D. Beloiu - My Portfolio'), #header (title_)
+        html.H1('Alexandru D. Beloiu - Portfolio'), #header (title_)
     ], style=dict(textAlign='center')),
 
-   
+  
     html.Div([
-
+        dcc.Tabs([
+  dcc.Tab(label='About', children=[ 
         html.Div([
-            html.H2('About Me'), ## about me sextion
+            
+            html.H2('About Me'), ## about me section
             html.Img(src='https://cdn.discordapp.com/attachments/695721840324247562/746980932598104125/unknown.png', style={'width':'100%'}), ##adds a photo of the terminal
             html.Br(),
             html.H5('The website you are on right now was programmed completely by me using the Jupyter Dash library in Python.'), 
@@ -42,11 +64,15 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Label("Instagram: @alex_beloiu"),
             html.Br(),
 
-        ], className="four columns", style=dict(textAlign='center')),
-
+        ], className="four columns", style=dict(textAlign='center')),##style sets the alignment of text
+  ],style=tab_style, selected_style=tab_selected_style),
+    dcc.Tab(label='Education', children=[
+        html.Div([ ##white space section
+                 html.Br(),
+                ], className="10 columns"),                                
         html.Div([ ##education section
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
-            html.H2('My Education'),
+            html.H1('Education'),
             html.H3('University of Michigan, Ann Arbor: Computer Engineering (2020-Present)'),
             html.H4('Current Course Schedule (Fall 2020)'),
             html.Label('• EECS 203: Discrete Math'),
@@ -63,15 +89,24 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Label('• Relavent Coursework Completed: AP Computer Science A (JAVA), AP Computer Science Principles (Python), AP Calc AB, AP Calc BC, AP Physics-C (Mechanics), AP Physics-C (E&M), AP Chemistry'),
             html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
+            html.Br(),
+
             ], className="seven columns"),  
             html.Div([ ##UofM photo
               html.Br(),
               html.Br(),
               html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746884075289051246/U-M-logo-preview.png', style={'width':'75%'}),        
               ], className="four columns"),
+              ],style=tab_style, selected_style=tab_selected_style),
+      dcc.Tab(label='Experience', children=[
+         html.Div([ ##white space section
+                 html.Br(),
+       ], className="10 columns"),  
+
         html.Div([ ##experience section
-            html.Br(),
-            html.H2('My Relevant Experience'),
+            
+            html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
+            html.H1('Relevant Experience'),
             html.H4('Blockchain at the University of Michigan (7/2020 - Present)'),
             html.Label('• Worked in a 4 person project team to create a fully functional proof of concept for a charity that is 100% transparent by using Blockchain technology and Python web development'),
             html.Br(),
@@ -90,9 +125,46 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.Br(),
-        ], className="ten columns", style=dict(textAlign='left')), ##style sets the alignment of text
-     
+        ], className="ten columns"), ##style sets the alignment of text
+        html.Div([ ##leadership header
+                 html.H1('Leadership Experience'),
+       ], className="ten columns"),
+       html.Div([ ##leadership section 1
+                 html.H4('Northville High School Track and Field Team Captain (11th-12th)'),
+                 html.Label('• Responsible for leading practice, organizing team-building events, ensuring athletes participation, and helping new runners improve technique'),
+                 html.Label('• Organized winter track conditioning throughout the off-season '),
+                 html.Label('• Organized and participated in community service events by cooking and packaging Thanksgiving meals and purchasing, wrapping and distributing Christmas gifts to families in need'),
+       ], className="five columns"),
+       html.Div([ ##leadership section 2
+                 html.H4('Northville High School Cross Country Team Captain (12th)'),
+                 html.Label('• Responsible for leading practice, assisting coaches, motivating the team, and mentoring younger members'),
+                 html.Label('• Led and planned runs for summer conditioning '),
+                 html.Label('• Created posters, and organized a team car wash fundraiser, raising $800 for new uniforms and equipment'),
+                 
+
+       ], className="five columns"),
+
+
+       html.Div([ ##skills
+            html.Br(),
+            html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
+            html.H1('Skills'),
+            html.Label('Technical Programming Skills: Proficient in Solidity, Truffle Framework, Python, JAVA, C++, and MATLAB'),
+            html.Br(),
+            html.Label('Technical 3D Modeling Skills: Proficient in Autodesk Inventor and Google Sketch-Up'),
+            html.Br(),
+            html.Br(),
+
+
+        ], className="ten columns"),
+        ],style=tab_style, selected_style=tab_selected_style),
+     dcc.Tab(label='Projects', children=[
+        html.Div([ ##white space
+            html.Br(),
+        ], className="ten columns", style=dict(textAlign='center')),                                 
         html.Div([
+            ##below acts as a styling for the website
+            html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.H1('My Projects'), ##project section
             html.Label('Over the past year, I have worked on a few distinct projects in multiple languages, including Python, Solidity and MATLAB.'),
         ], className="Ten columns"),
@@ -153,16 +225,18 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
 
         ], className="four columns", style=dict(textAlign='center')),
-
-
+         html.Div([ ##white space
+            html.Br(),
+            html.Br(),
+        ], className="ten columns", style=dict(textAlign='center')),
+],style=tab_style, selected_style=tab_selected_style),
+dcc.Tab(label='Research', children=[
+        html.Div([ ##white space section
+                 html.Br(),
+                ], className="10 columns"),                                 
         html.Div([ ##research section
-           
-            html.Br(),
-            html.Br(),
-
-            html.Br(), ##below acts as a styling for the website
+            ##below acts as a styling for the website
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
-            html.Br(), 
             html.H1('Summer Research'),
             html.Label('Throughout the 2019 summer, I participated in Solar Cell research at UCLA and presented my findings to faculty.'),
             html.H3('University of California at Los Angeles (UCLA) - Applications of Nanoscience Summer Institute (Summer 2019)'), html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746888986135363665/AATXAJwL8Df4luwycQ8Bfi7XxaLx7Ll2KyhnXI3d_TUvs900-c-k-c0xffffffff-no-rj-mo.png', style={'width':'10%'}),
@@ -180,44 +254,14 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.Br(),
 
-        ], className="ten columns", style=dict(textAlign='left')),
+        ], className="ten columns", style=dict(textAlign='Left')),
+],style=tab_style, selected_style=tab_selected_style),
 
-       html.Div([ ##leadership header
-                 html.H2('My Leadership Experience'),
-       ], className="ten columns"),
-       html.Div([ ##leadership section 1
-                 html.H4('Northville High School Track and Field Team Captain (11th-12th)'),
-                 html.Label('• Responsible for leading practice, organizing team-building events, ensuring athletes participation, and helping new runners improve technique'),
-                 html.Label('• Organized winter track conditioning throughout the off-season '),
-                 html.Label('• Organized and participated in community service events by cooking and packaging Thanksgiving meals and purchasing, wrapping and distributing Christmas gifts to families in need'),
-       ], className="five columns"),
-       html.Div([ ##leadership section 2
-                 html.H4('Northville High School Cross Country Team Captain (12th)'),
-                 html.Label('• Responsible for leading practice, assisting coaches, motivating the team, and mentoring younger members'),
-                 html.Label('• Led and planned runs for summer conditioning '),
-                 html.Label('• Created posters, and organized a team car wash fundraiser, raising $800 for new uniforms and equipment'),
-                 
-
-       ], className="five columns"),
-
-
-       html.Div([ ##skills
-            html.Br(),
-            html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
-            html.H2('My Skills'),
-            html.Label('Technical Programming Skills: Proficient in Solidity, Truffle Framework, Python, JAVA, C++, and MATLAB'),
-            html.Br(),
-            html.Label('Technical 3D Modeling Skills: Proficient in Autodesk Inventor and Google Sketch-Up'),
-            html.Br(),
-            html.Br(),
-
-
-        ], className="ten columns"),
         
-
+]),
     ], className="row"),
 
-    
+
 ])
 
 if __name__ == '__main__':
