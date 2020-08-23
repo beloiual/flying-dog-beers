@@ -27,7 +27,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         html.Div([
             html.H2('About Me'), ## about me sextion
             html.Img(src='https://cdn.discordapp.com/attachments/695721840324247562/746980932598104125/unknown.png', style={'width':'100%'}), ##adds a photo of the terminal
-            html.H5('The website you are on right now was programmed completely by me using the Juypter Dash library in Python.'), 
+            html.H5('The website you are on right now was programmed completely by me using the Jupyter Dash library in Python.'), 
             html.Br(),
             html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
