@@ -262,7 +262,7 @@ dcc.Tab(label='Research', children=[
     ], className="row"),
 
 
-]),
+])
 
 if __name__ == '__main__':
     app.run_server() #runs the app
