@@ -104,6 +104,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Label('• Relavent Coursework Completed: AP Computer Science A (JAVA), AP Computer Science Principles (Python), AP Calc AB, AP Calc BC, AP Physics-C (Mechanics), AP Physics-C (E&M), AP Chemistry'),
             html.Br(),
+            html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
 
             ], className="seven columns"),  
             html.Div([ ##UofM photo
@@ -116,7 +117,6 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
                 html.Br(),
                 html.Br(),
                 html.Br(),
-                html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
                 html.Br(),
                 html.Label("This website is optimized for PC."),
                 html.Br(),
@@ -284,7 +284,7 @@ dcc.Tab(label='Research', children=[
             html.Br(),
             html.Br(),
             html.Br(),
-            html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
+            html.Br(),
             html.Br(),
         ], className="ten columns", style=dict(textAlign='Left')),
          html.Div([
