@@ -65,7 +65,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
 
         ], className="four columns", style=dict(textAlign='center')),##style sets the alignment of text
-         html.Div([
+        html.Div([
             html.Br(),
             html.Br(),
             html.Br(),
@@ -78,11 +78,9 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Br(),
             html.Br(),
+            html.H5("This website is optimized for PC."),
             html.Br(),
-            html.Br(),
-            html.H5("This website is optimized for PC"),
-            html.Br(),
-        ], className="ten columns", style=dict(textAlign='Right')),##style sets the alignment of text
+        ], className="twelve columns", style=dict(textAlign='Right')),##style sets the alignment of text
   ],style=tab_style, selected_style=tab_selected_style),
     dcc.Tab(label='Education', children=[
         html.Div([ ##white space section
@@ -175,6 +173,11 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
 
         ], className="ten columns"),
+         html.Div([
+            html.Br(),
+            html.H5("This website is optimized for PC."),
+            html.Br(),
+        ], className="twelve columns", style=dict(textAlign='Right')),##style sets the alignment of text
         ],style=tab_style, selected_style=tab_selected_style),
      dcc.Tab(label='Projects', children=[
         html.Div([ ##white space
@@ -245,8 +248,9 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         ], className="four columns", style=dict(textAlign='center')),
          html.Div([ ##white space
             html.Br(),
+            html.H5("This website is optimized for PC."),
             html.Br(),
-        ], className="ten columns", style=dict(textAlign='center')),
+        ], className="twelve columns", style=dict(textAlign='right')),
 ],style=tab_style, selected_style=tab_selected_style),
 dcc.Tab(label='Research', children=[
         html.Div([ ##white space section
@@ -271,8 +275,15 @@ dcc.Tab(label='Research', children=[
             href='https://docs.google.com/presentation/d/1Q-Y89N856EosrPXJvpV2HqX1c5y88jDctkOtvcjmvN0/edit?usp=sharing'), ##links to the research
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
             html.Br(),
-
         ], className="ten columns", style=dict(textAlign='Left')),
+         html.Div([
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.Br(),
+            html.H5("This website is optimized for PC."),
+            html.Br(),
+        ], className="twelve columns", style=dict(textAlign='Right')),##style sets the alignment of text
 ],style=tab_style, selected_style=tab_selected_style),
 
         
