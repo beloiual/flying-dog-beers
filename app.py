@@ -24,30 +24,23 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
    
     html.Div([
 
-        html.Div([ ##The 'About Me' section
-            html.H2('About Me'), 
-            html.Label('I am currently an undergraduate studying Computer Engineering at the University of Michigan Ann Arbor, set to graduate in 2024.'), ##writes a line of text
-            html.Label('Over this past summer, I have been developing skills in creating BlockChain smart contracts using the Solidity programming language and deploying them to testnets. Along with increasing my grasp on the vast applications of Blockchain development, I have also been developing my skills in web development.'),
-            html.Br(),
-            html.Br(),
-            html.Br(),##adds a space in between a line
-            html.Br(),
-            html.Br(),
-            html.H5('The website you are on right now was programmed completely by me using the Juypter Dash library in Python.'),
-            html.Br(),
+        html.Div([
+            html.H2('About Me'), ## about me sextion
+            html.Img(src='https://cdn.discordapp.com/attachments/695721840324247562/746980932598104125/unknown.png', style={'width':'100%'}), ##adds a photo of the terminal
+            html.H5('The website you are on right now was programmed completely by me using the Juypter Dash library in Python.'), 
             html.Br(),
             html.Br(),
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
-            ], className="seven columns", ),
-          html.Div([ ##adds the photo and the social media
+            ], className="seven columns", style=dict(textAlign='center')),
+          html.Div([
             
-            html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'33%'}),
+            html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'50%'}), ##personal photo and social
             html.Label("Email: beloiual@umich.edu"),
-            html.Label("LinkedIn: alexandru-beloiu-4ab46b1b5"),
-            html.Label("Instagram: @alex.beloiu"),
+            html.Label("LinkedIn: Alexandru Beloiu"),
+            html.Label("Instagram: alex.beloiu"),
             html.Br(),
 
-        ], className="four columns"),##sets how much space is taken up by this section
+        ], className="four columns", style=dict(textAlign='center')),
 
         html.Div([ ##education section
             html.H2('My Education'),
