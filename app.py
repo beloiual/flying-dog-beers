@@ -165,7 +165,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         html.Div([
             ##below acts as a styling for the website
             html.Label('______________________________________________________________________________________________________________________________________________________________________________'),
-            html.H1('My Projects'), ##project section
+            html.H1('Projects'), ##project section
             html.Label('Over the past year, I have worked on a few distinct projects in multiple languages, including Python, Solidity and MATLAB.'),
         ], className="Ten columns"),
       
