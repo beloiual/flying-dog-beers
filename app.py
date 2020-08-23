@@ -55,7 +55,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Label('• Engr 100: Gaming for the Greater Good'),
             html.Br(),
-            html.H4('Northville High School (2016-2020'),
+            html.H4('Northville High School (2016-2020)'),
             html.Label('• GPA: 3.96'),
             html.Br(),
             html.Label('• Awards: National Merit Commended, Academic Excellence Award Recipient, National AP Scholar, Presidential Award, Summa Cum Laude, University of Michigan Regents Scholarship'),
