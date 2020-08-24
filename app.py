@@ -47,19 +47,11 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
   dcc.Tab(label='About', children=[ 
        html.Div([
             html.Br(),
-            html.Br(),
-            html.Br(),
-            html.Br(),
-            html.Br(),
-            html.Br(),
-            html.Br(),
-            html.Label("This website is optimized for PC."),
-            html.Br(),
-        ], className="one column"),##style sets the alignment of text
+        ], className="eleven column"),##style sets the alignment of text
         html.Div([
             
             html.H2('About Me'), ## about me section
-            html.Img(src='https://media.discordapp.net/attachments/705838282440835164/747317821087940728/PythonCapture.PNG', style={'width':'100%'}), ##adds a photo of the terminal
+            html.Img(src='https://media.discordapp.net/attachments/705838282440835164/747317821087940728/PythonCapture.PNG', style={'width':'125%'}), ##adds a photo of the terminal
             html.Br(),
             html.H5('The website you are on right now was programmed completely by me using the Jupyter Dash library in Python.'), 
             html.Br(),
@@ -69,7 +61,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             ], className="seven columns", style=dict(textAlign='center')),
           html.Div([
             html.Br(),
-            html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'100%'}), ##personal photo and social
+            html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'90%'}), ##personal photo and social
             html.Label("Email: beloiual@umich.edu"),
             html.Label("LinkedIn: alexandru-beloiu-4ab46b1b5"),
             html.Label("Instagram: @alex_beloiu"),
@@ -77,12 +69,6 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
 
         ], className="four columns", style=dict(textAlign='center')),##style sets the alignment of text
         html.Div([
-            html.Br(),
-            html.Br(),
-            html.Br(),
-            html.Br(),
-            html.Br(),
-            html.Br(),
             html.Br(),
             html.Label("This website is optimized for PC."),
             html.Br(),
