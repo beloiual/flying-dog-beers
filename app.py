@@ -51,9 +51,23 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         html.Div([
             html.Label('_______________________________________________________________________________________________________________________________'),
             html.H2('About Me'), ## about me section
-            html.Img(src='https://media.discordapp.net/attachments/705838282440835164/747317821087940728/PythonCapture.PNG', style={'width':'100%'}), ##adds a photo of the terminal
+            #html.Img(src='https://media.discordapp.net/attachments/705838282440835164/747317821087940728/PythonCapture.PNG', style={'width':'100%'}), ##adds a photo of the terminal
             html.Br(),
-            html.H5('The website you are on right now was programmed and formated completely by me'), 
+            html.Label('aboutme.py compiling..... (Caught 0 errors)'),
+            html.Label('Compiled succesfully (Caught 0 errors)'),
+            html.Br(),
+            html.Br(),
+            html.Label('What am I currently Studying?'),
+            html.Br(),
+            html.Label('>> I am currently studying Computer Engineering at the University of Michigan, Ann Arbor (Class of 2024)'),
+            html.Br(),
+            html.Br(),
+            html.Label('What have I been doing this summer?'),
+            html.Br(),
+            html.Label('>> Over this past summer, I have been developing skills in creating smart contracts using Blockchain technology through Solidity. I have actively been working on creating secure smart contracts and deploying them to testnets, such as the Ropsten test net, through the use of the Truffle framework. Along with increasing my grasp on the vast applications of Blockchain development, I have been developing my skills in web development through Python, and soon, HTML.'),
+            html.Br(),
+            html.Br(),
+            html.H5('The website you are on right now was programmed and formated completely by me.'), 
             html.Br(),
             html.Label('_______________________________________________________________________________________________________________________________'),
             html.Br(),
