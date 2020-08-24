@@ -51,11 +51,9 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         html.Div([
             html.Label('_______________________________________________________________________________________________________________________________'),
             html.H2('About Me'), ## about me section
-            #html.Img(src='https://media.discordapp.net/attachments/705838282440835164/747317821087940728/PythonCapture.PNG', style={'width':'100%'}), ##adds a photo of the terminal
             html.Br(),
             html.Label('aboutme.py compiling..... '),
             html.Label('Compiled succesfully (Caught 0 errors)'),
-            html.Br(),
             html.Br(),
             html.Br(),
             html.Br(),
