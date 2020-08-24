@@ -49,7 +49,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
         ], className="ten column"),##style sets the alignment of text
         html.Div([
-            
+            html.Label('__________________________________________________________________________________'),
             html.H2('About Me'), ## about me section
             html.Img(src='https://media.discordapp.net/attachments/705838282440835164/747317821087940728/PythonCapture.PNG', style={'width':'100%'}), ##adds a photo of the terminal
             html.Br(),
