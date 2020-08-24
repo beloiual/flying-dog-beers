@@ -49,7 +49,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
         ], className="ten column"),##style sets the alignment of text
         html.Div([
-            html.Label('__________________________________________________________________________________'),
+            html.Label('________________________________________________________________________________________________________'),
             html.H2('About Me'), ## about me section
             html.Img(src='https://media.discordapp.net/attachments/705838282440835164/747317821087940728/PythonCapture.PNG', style={'width':'100%'}), ##adds a photo of the terminal
             html.Br(),
@@ -58,7 +58,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Br(),
             html.Br(),
             html.Br(),
-            ], className="seven columns", style=dict(textAlign='center')),
+            ], className="seven columns", style=dict(textAlign='left')),
           html.Div([
             html.Br(),
             html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'90%'}), ##personal photo and social
