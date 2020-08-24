@@ -47,13 +47,13 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
   dcc.Tab(label='About', children=[ 
        html.Div([
             html.Br(),
-        ], className="eleven column"),##style sets the alignment of text
+        ], className="ten column"),##style sets the alignment of text
         html.Div([
             
             html.H2('About Me'), ## about me section
-            html.Img(src='https://media.discordapp.net/attachments/705838282440835164/747317821087940728/PythonCapture.PNG', style={'width':'125%'}), ##adds a photo of the terminal
+            html.Img(src='https://media.discordapp.net/attachments/705838282440835164/747317821087940728/PythonCapture.PNG', style={'width':'100%'}), ##adds a photo of the terminal
             html.Br(),
-            html.H5('The website you are on right now was programmed completely by me using the Jupyter Dash library in Python.'), 
+            html.H5('The website you are on right now was programmed and formated completely by me'), 
             html.Br(),
             html.Br(),
             html.Br(),
