@@ -48,7 +48,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
         html.Div([
             
             html.H2('About Me'), ## about me section
-            html.Img(src='https://cdn.discordapp.com/attachments/695721840324247562/746980932598104125/unknown.png', style={'width':'100%'}), ##adds a photo of the terminal
+            html.Img(src='https://cdn.discordapp.com/attachments/695721840324247562/746980932598104125/unknown.png', style={'width':'200%'}), ##adds a photo of the terminal
             html.Br(),
             html.H5('The website you are on right now was programmed completely by me using the Jupyter Dash library in Python.'), 
             html.Br(),
@@ -58,7 +58,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             ], className="seven columns", style=dict(textAlign='center')),
           html.Div([
             
-            html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'50%'}), ##personal photo and social
+            html.Img(src='https://cdn.discordapp.com/attachments/705838282440835164/746767914270589098/image0.png', style={'width':'100%'}), ##personal photo and social
             html.Label("Email: beloiual@umich.edu"),
             html.Label("LinkedIn: alexandru-beloiu-4ab46b1b5"),
             html.Label("Instagram: @alex_beloiu"),
