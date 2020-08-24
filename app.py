@@ -67,7 +67,7 @@ app.layout = html.Div(style={'backgroundColor': colors['background']}, children=
             html.Label("Instagram: @alex_beloiu"),
             html.Br(),
 
-        ], className="four columns", style=dict(textAlign='center')),##style sets the alignment of text
+        ], className="four columns", style=dict(textAlign='left')),##style sets the alignment of text
         html.Div([
             html.Br(),
             html.Label("This website is optimized for PC."),
